@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirt 3</title>
+
+<style>
+
+body{font-family:Arial;background:#f4f4f4;text-align:center}
+
+.container{margin-top:40px}
+
+img{width:300px;border-radius:10px}
+
+.colors span{
+display:inline-block;
+width:28px;
+height:28px;
+border-radius:50%;
+margin:6px;
+border:2px solid black;
+cursor:pointer;
+}
+
+.sizes button{
+margin:5px;
+padding:8px 14px;
+border:none;
+background:#ddd;
+cursor:pointer;
+}
+
+.sizes button:hover{
+background:black;
+color:white;
+}
+
+.selected{
+background:black!important;
+color:white!important;
+}
+
+.price{font-weight:bold;margin-top:10px}
+
+.back{display:block;margin-top:25px}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Shirt 3</h2>
+
+<img id="mainImg" src="https://images.unsplash.com/photo-1593032465171-8f0b6b2e9b0b?w=600">
+
+<h3>Color</h3>
+
+<div class="colors">
+
+<span style="background:navy" onclick="changeColor('https://images.unsplash.com/photo-1593032465171-8f0b6b2e9b0b?w=600',this)"></span>
+<span style="background:black" onclick="changeColor('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600',this)"></span>
+
+</div>
+
+<h3>Sizes</h3>
+
+<div class="sizes">
+<button onclick='selectSize(this)'>XS</button><button onclick='selectSize(this)'>S</button><button onclick='selectSize(this)'>M</button><button onclick='selectSize(this)'>L</button>
+</div>
+
+<p id="sizeText">Selected Size: None</p>
+
+<p class="price">Price: ₱1150</p>
+
+<a class="back" href="./index.html">← Back to Gallery</a>
+
+</div>
+
+<script>
+
+function changeColor(img,el){
+document.getElementById("mainImg").src = img;
+
+let colors=document.querySelectorAll(".colors span");
+colors.forEach(c=>c.style.outline="none");
+el.style.outline="3px solid black";
+}
+
+function selectSize(btn){
+let buttons=document.querySelectorAll(".sizes button");
+buttons.forEach(b=>b.classList.remove("selected"));
+btn.classList.add("selected");
+document.getElementById("sizeText").innerText="Selected Size: "+btn.innerText;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jewelry2</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body class="details-page-layout">
+
+    <main class="product-container">
+        
+        <div class="thumbnails">
+            <img src="../../../img/bracelet.png" onclick="changeImage('img/bracelet.png')" alt="thumb">
+            <img src="../../../img/bracelet2.png" onclick="changeImage('img/bracelet2.png')" alt="thumb">
+            <img src="../../../img/bracelet3.png" onclick="changeImage('img/bracelet3.png')" alt="thumb">
+        </div>
+
+        <div class="main-image-section">
+            <div class="image-scroll-container">
+                <img id="current-img" src="../../../img/bracelet.png" alt="Main Product">
+            </div>
+            <div class="stock-status">IN STOCK</div>
+        </div>
+
+        <aside class="selection-box">
+            <h1 class="label">Bracelet</h1>
+
+            <div class="price-section">
+                <h1 class="price-text">Price</h1>
+                <h2 class="price-amount">$150.00</h2>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        function changeImage(imagePath) {
+            document.getElementById('current-img').src = imagePath;
+        }
+    </script>
+
+</body>
+</html>
