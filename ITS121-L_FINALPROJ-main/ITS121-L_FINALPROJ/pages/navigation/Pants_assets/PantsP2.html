@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PantsP1</title>
-    <link rel="stylesheet" href="../../../css/style.css">
+    <title>jewelry1</title>
+   <link rel="stylesheet" href="../../../css/style.css">
 </head>
-<body class="details-page-layout">
-
+<body class="signup-page">
+<!-- NAVIGATION -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../../pages/navigation/newin.html">New In</a></li>
+                <li><a href="../../../pages/cart/checkout.html">Checkout</a></li>
+                <li><a href="../../../pages/navigation/jewelry.html">Jewelry</a></li>
+                <li><a href="../../../pages/navigation/shirts.html">Shirts</a></li>
+                <li><a href="../../../pages/navigation/pants.html">Pants</a></li>
+                <li><a href="../../../pages/login-signin/login.html">Login</a></li>
+            </ul>
+        </nav>
+<!-- MAIN -->
     <main class="product-container">
         
         <div class="thumbnails">
-            <img src="../../../img/bracelet.png" onclick="changeImage('img/bracelet.png')" alt="thumb">
-            <img src="../../../img/bracelet2.png" onclick="changeImage('img/bracelet2.png')" alt="thumb">
-            <img src="../../../img/bracelet3.png" onclick="changeImage('img/bracelet3.png')" alt="thumb">
+            <img src="../../../img/bluepants.png" onclick="changeImage('../../../img/bluepants.png')" alt="thumb">
+            <img src="../../../img/bluepants2.png" onclick="changeImage('../../../img/bluepants2.png')" alt="thumb">
+            <img src="../../../img/bluepants3.png" onclick="changeImage('../../../img/bluepants3.png')" alt="thumb">
         </div>
 
         <div class="main-image-section">
             <div class="image-scroll-container">
-                <img id="current-img" src="../../../img/bracelet.png" alt="Main Product">
+                <img id="current-img" src="../../../img/bluepants.png" alt="Main Product">
             </div>
             <div class="stock-status">IN STOCK</div>
         </div>
 
         <aside class="selection-box">
-            <h1 class="label">Bracelet</h1>
+            <h1 class="label">Blue Pants</h1>
 
             <div class="price-section">
                 <h1 class="price-text">Price</h1>
-                <h2 class="price-amount">$150.00</h2>
+                <h2 class="price-amount">$180.00</h2>
             </div>
         </aside>
     </main>
 
+    <script>
+        function changeImage(imagePath) {
+            document.getElementById('current-img').src = imagePath;
+        }
+    </script>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Own Js script-->
-<script src="js/main.js"></script>
 </body>
 </html>
